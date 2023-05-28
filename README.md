@@ -9,7 +9,7 @@
 
 ## Contributor
 
-[![Rafael González](https://img.shields.io/badge/-@loboguardian-#77777?style=for-the-badge&logoColor=white&labelColor=101010&logo=github)](https://github.com/loboguardian)
+[![Rafael González](https://img.shields.io/badge/-@loboguardian-77777?style=for-the-badge&logoColor=white&labelColor=101010&logo=github)](https://github.com/loboguardian)
 
 ## License
 
