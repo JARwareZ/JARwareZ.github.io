@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="JARwareZ Landing Pages">
+    <meta name="keywords" content="Landing Pages">
+    <meta name="author" content="LoboGuardian for JARwareZ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+    <title>JARwareZ</title>
+</head>
+<body>
+    <template id="greetings">
+        ██╗ █████╗ ██████╗ ██╗    ██╗ █████╗ ██████╗ ███████╗███████╗
+        ██║██╔══██╗██╔══██╗██║    ██║██╔══██╗██╔══██╗██╔════╝╚══███╔╝
+        ██║███████║██████╔╝██║ █╗ ██║███████║██████╔╝█████╗    ███╔╝ 
+   ██   ██║██╔══██║██╔══██╗██║███╗██║██╔══██║██╔══██╗██╔══╝   ███╔╝  
+   ╚█████╔╝██║  ██║██║  ██║╚███╔███╔╝██║  ██║██║  ██║███████╗███████╗
+    ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝
+    --
+    Type 'help' to see list of available commannds.
+    -- 
+    Now the project is open-source tepo to check out the repository.
+    -- 
+    For a simpfied version, click Here.
+       </template>
+       <script>
+       $('body').terminal("service.py", {
+           greetings: greetings.innerHTML
+       });
+       </script>
+    <script>
+        $('body').terminal({
+            hello: function(what) {
+                this.echo('Hello, ' + what +
+                          '. Wellcome to this terminal.');
+            }
+        }, {
+            greetings: 'My First Web Terminal'
+        });
+        </script>
+</body>
+</html>
