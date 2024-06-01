@@ -1,48 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="JARwareZ Landing Pages">
-    <meta name="keywords" content="Landing Pages">
-    <meta name="author" content="LoboGuardian for JARwareZ">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-   <!--  <script src="assets/js/script.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
-    <title>JARwareZ</title>
-</head>
-<body>
-    <template id="greetings">
-        ██╗ █████╗ ██████╗ ██╗    ██╗ █████╗ ██████╗ ███████╗███████╗
-        ██║██╔══██╗██╔══██╗██║    ██║██╔══██╗██╔══██╗██╔════╝╚══███╔╝
-        ██║███████║██████╔╝██║ █╗ ██║███████║██████╔╝█████╗    ███╔╝ 
-   ██   ██║██╔══██║██╔══██╗██║███╗██║██╔══██║██╔══██╗██╔══╝   ███╔╝  
-   ╚█████╔╝██║  ██║██║  ██║╚███╔███╔╝██║  ██║██║  ██║███████╗███████╗
-    ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝
-    --
-    Type 'help' to see list of available commannds.
-    -- 
-    Now the project is open-source type to check out the repository.
-    -- 
-    For a simpfied version, click Here.
-       </template>
-       <script>
-       $('body').terminal("service.py", {
-           greetings: greetings.innerHTML
-       });
-       </script>
+    <head>
+        <title>JARwareZ - LoboGuardian</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="JARwareZ Landing Pages">
+        <meta name="keywords" content="Landing Pages">
+        <meta name="author" content="LoboGuardian for JARwareZ">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="timeline.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="slider.css"></link>
+       
+    </head>
+    <body>
+        <div class="scrollTop" onclick="scrollToTop();"></div>
+        <nav class="navbar navbar-expand-md">
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navigation">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Some facts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#legacy" class="nav-link" >Team</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#sponsors" class="nav-link" >Previous Sponsors</a>
+                </li> -->
+                <li class="nav-item">
+                  <a href="#contacts" class="nav-link" >Contact Us</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="vantajs" class="masthead">
+        <div class="container h-100">
+            <div class="row">
+
+                <div class="col-lg-10 align-contents-center">
+                    <!--<h2 class="text-uppercase text-white">IEDCMEC</h2>
+                        <p class="text-white font-style-italic font-weight-bold">presents</p>
+                        <hr class="divider my-4" />-->
+                        <img class="img-logo" src="assets/logox.png" alt="" />
+                        
+                        
+                </div>  
+              </div>
+                
+            </div>
+            <a class="btn draw-border explore" href="#about">Explore</a>
+        </div>
+        <div id="mobile" class="masthead">
+          <div class="container h-100">
+            
+              <div class="row">
+  
+                  <div class="col-lg-10 align-contents-center">
+                          <img class="img-logo" src="assets/logox.png" alt="" />
+                          
+                  </div>
+                  
+                </div>
+                <div id="globe">
+                  <canvas id="canvas"></canvas>
+                </div>    
+              </div>
+              
+              <a class="btn draw-border explore" href="#about">Explore</a>
+              
+          </div>
+        <div id="about" class="about">
+            <h1 data-aos="fade-down">About</h1>
+            <hr />
+            <div class="about-contents">
+                <div class="about-header left" data-aos="fade-up">
+                    <img class="img-iedc" src="assets/iedclogo.png" />
+                    <p class="presents">presents</p>
+                    <img class="img-logo-about" src="assets/logox.png" alt="" />
+                </div>
+                <div class="right" data-aos="fade-up">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non porta nisl. In in hendrerit
+                        tortor. Morbi in neque congue, ullamcorper odio quis, euismod ligula. Donec interdum neque a
+                        tortor mattis, ac iaculis velit dictum. Aliquam efficitur non libero eget suscipit. Vivamus elit
+                        sapien, tincidunt a tortor quis, tincidunt aliquet ante. Ut aliquam nisl eget posuere pulvinar.
+                        Maecenas at imperdiet magna.
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="services" id="services">
+
+          <h1 data-aos="fade-down">Some facts</h1>
+          <hr />
+          <div>
+            <p class="services-text-right">
+              Passion for technology.
+            </p>
+            <div data-aos="fade-down" class="services-icon-left"><i class="fa fa-globe"></i></div>
+            <p class="services-text-left">That knows no borders or barriers.</p>
+            <div data-aos="fade-down" class="services-icon-right"><i class="fas fa-users"></i></div>
+            <p class="services-text-right">With more than 8 years of knowledge acquisition.</p>
+            <div data-aos="fade-down" class="services-icon-left"><i class="fas fa-university"></i></div>
+            <p class="services-text-left">With a wide presence in the world of the internet.</p>
+              <div data-aos="fade-down" class="services-icon-right"><i class="fas fa-thumbs-up"></i></div>
+            <p class="services-text-right">Website records 3 lakh unique hits each year</p>
+            <div data-aos="fade-down" class="services-icon-left"><i class="fa fa-mouse-pointer"></i></div>
+            <p class="services-text-left">Event covered by leading dailies and magazines throughout the
+              buildup</p>
+              <div data-aos="fade-down" class="services-icon-right"><i class="fas fa-newspaper"></i></div>
+            <p class="services-text-right">Association with a brand name that companies are proud to be a
+              part of</p>
+              <div data-aos="fade-down" class="services-icon-left"><i class="fa fa-handshake"></i></div>
+            <p class="services-text-left">Event to be released on Youtube, further improving the brand's
+              visibility</p>
+              <div data-aos="fade-down" class="services-icon-right"><i class="fab fa-youtube"></i></div>
+            <p class="services-last"></p>
+          </div>
+        </div>
+        
+
+            <div id = "legacy" class = "legacy">
+                <h1 data-aos="fade-down" class = "leg">Team</h1>
+                <hr/>                
+                <div class="scene">
+                    <div class="carousel" id="carousel">
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                          <img src="https://github.com/loboguardian.png" class = "img-leg2" />
+                          <div class="overlay">
+                            <div class="text">Rafael G. (LoboGuardian)</div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div> -->
+                      <!-- <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div> -->
+                      <!-- <div class="carousel__cell">
+                        <div class="img-container" >
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div> -->
+                      <!-- <div class="carousel__cell">
+                        <div class="img-container" >
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div> -->
+                      <!-- <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container" >
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/v#a.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container" >
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container" >
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container" >
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container" >
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container">
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel__cell">
+                        <div class="img-container" >
+                            <img src="./assets/legacy/#.jpeg" class = "img-leg2" />
+                            <div class="overlay">
+                              <div class="text">#</div>
+                            </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="carousel-options">
+                    <p class = "input_fields">
+                      <label>
+                        Cells
+                        <input class="cells-range" type="range" min="1" max="1" value="1" />
+                      </label>
+                    </p>
+                      <button class="previous-button carousel_button_left"><i class="fa fa-chevron-left carousel_icons"></i></button>
+                      <button class="next-button carousel_button_right"><i class="fa fa-chevron-right carousel_icons"></i></button>
+                    <p class = "input_fields">
+                      Orientation:
+                      <label>
+                        <input type="radio" name="orientation" value="horizontal" checked/>
+                        horizontal
+                      </label>
+                      <label>
+                        <input type="radio" name="orientation" value="vertical"/>
+                        vertical
+                      </label>
+                    </p>
+                  </div>         
+            </div>
+            
+            
+            <!-- <div id="sponsors" class="sponsors">
+                <h1 data-aos="fade-down">Previous Sponsors</h1>
+                <hr/>
+                <div class="sponsor-container">
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.jpeg" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.jpeg" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.jpeg" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    <img id="floating" class = "floating" src="./assets/sponsors/#.png" />
+                    
+                </div>
+
+
+            </div> -->
+            <div id="contacts" class = "contacts">
+              <h1 class ="contact-head" data-aos="fade-down">Contacts</h1>
+              <hr/>
+              <div class = "contact-container">
+
+                <!-- <div data-aos="flip-right" class = "contact">
+
+                  <img class = "contact-img" src="./assets/contact/#.jpg" />
+                  <h1 class = "contact-name">#</h1>
+                  <p>#</p>
+                </div> -->
+
+                <div data-aos="flip-up" class = "contact">
+
+                  <img class = "contact-img" src="https://github.com/loboguardian.png" />
+                  <h1 class = "contact-name">Rafael González (LoboGuardian)</h1>
+                  <p>Engineer</p>
+                  <p># LinkedIn</p>
+                </div>
+
+
+                <!-- <div data-aos="flip-left" class = "contact">
+
+                  <img class = "contact-img" src="./assets/contact/#.jpg" />
+                  <h1 class = "contact-name">#</h1>
+                  <p># </p>
+                </div>
+                
+              </div> -->
+            </div>
+            
+    </body>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+    <script src="./orbitcontrol.js"></script>
+    <script src="./globe.js"></script>
+    <script src="./vantaglobe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+    
+    
+
     <script>
-        $('body').terminal({
-            hello: function(what) {
-                this.echo('Hello, ' + what +
-                          '. Wellcome to this terminal.');
-            }
-        }, {
-            greetings: 'My First Web Terminal'
-        });
-        </script>
-</body>
+            VANTA.GLOBE({
+                el: "#vantajs",
+                backgroundAlpha: 0,
+                mouseControls: false,
+                touchControls: false,
+                gyroControls: false,
+                minHeight: 500.00,
+                minWidth: 500,
+                scale: 1.00,
+                scaleMobile: 0.5,
+                color: 0xACE4FF,
+                backgroundColor: 0x040D21
+            });
+    </script>
+    <script>
+        VANTA.NET({
+          el: "#contacts",
+          backgroundAlpha:0,
+          mouseControls: false,
+          touchControls: false,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color:0x040D21
+        })
+    </script>
+    
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src = "slider.js"></script>
+    
 </html>
